@@ -2,8 +2,8 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-img1 = cv.imread("res/set-1/scene.png", cv.IMREAD_GRAYSCALE) # queryImage
-img2 = cv.imread("res/set-1/object.png", cv.IMREAD_GRAYSCALE) # trainImage
+img1 = cv.imread("res/set-2/scene.png", cv.IMREAD_GRAYSCALE)    # queryImage
+img2 = cv.imread("res/set-2/object.png", cv.IMREAD_GRAYSCALE)   # trainImage
 
 # Initiate ORB detector
 orb = cv.ORB_create()
