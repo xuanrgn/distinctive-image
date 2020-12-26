@@ -2,8 +2,8 @@ import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
 
-img1 = cv.imread("res/set-3/scene.jpg", cv.IMREAD_GRAYSCALE)          # queryImage
-img2 = cv.imread("res/set-3/object.jpg", cv.IMREAD_GRAYSCALE)         # trainImage
+img1 = cv.imread("res/set-2/scene.png", cv.IMREAD_GRAYSCALE)          # queryImage
+img2 = cv.imread("res/set-2/object.png", cv.IMREAD_GRAYSCALE)         # trainImage
 
 # Initiate SIFT detector
 sift = cv.SIFT_create()
