@@ -1,6 +1,5 @@
 import numpy as np
 import cv2 as cv
-import matplotlib.pyplot as plt
 
 img1 = cv.imread("res/set-2/scene.png", cv.IMREAD_GRAYSCALE)          # queryImage
 img2 = cv.imread("res/set-2/object.png", cv.IMREAD_GRAYSCALE)         # trainImage
@@ -33,8 +32,6 @@ draw_params = dict(matchColor = (0,255,0),
                    flags = cv.DrawMatchesFlags_DEFAULT)
 
 img3 = cv.drawMatchesKnn(img1, kp1, img2, kp2, matches, None, **draw_params)
-
-# plt.imshow(img3,),plt.show()
 
 # cv image show
 cv.imshow("Matching result", img3)

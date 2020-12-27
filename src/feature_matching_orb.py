@@ -1,6 +1,5 @@
 import numpy as np
 import cv2 as cv
-import matplotlib.pyplot as plt
 
 img1 = cv.imread("res/set-2/scene.png", cv.IMREAD_GRAYSCALE)    # queryImage
 img2 = cv.imread("res/set-2/object.png", cv.IMREAD_GRAYSCALE)   # trainImage
@@ -21,10 +20,8 @@ matches = bf.match(des1, des2)
 # Sort them in the order of their distance.
 matches = sorted(matches, key = lambda x:x.distance)
 
-# Draw first 10 matches.
+# Draw first 15 matches.
 img3 = cv.drawMatches(img1, kp1, img2, kp2, matches[:15], None, flags=cv.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
-
-# plt.imshow(img3),plt.show()
 
 # cv image show
 cv.imshow("Matching result", img3)
